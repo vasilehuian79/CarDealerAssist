@@ -1,3 +1,5 @@
+package Car;
+
 public class Car {
     private int carCode;
     private String model;
