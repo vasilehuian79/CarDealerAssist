@@ -7,7 +7,7 @@ public class CarCLI {
         System.out.println("Pick a version by entering code from above: ");
         Scanner version = new Scanner(System.in);
         int option1 = version.nextInt();
-        System.out.println("You have selected"+carStock.get(lines.ge));
+        System.out.println("You have selected"+carStock.get(lines.get));
         System.out.println("Please select a package: ");
         int option2=version.nextInt()
         System.out.println(": ");
