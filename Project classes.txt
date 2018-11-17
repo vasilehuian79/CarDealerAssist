@@ -1,0 +1,35 @@
+CAR
+===
+1. carCode
+2. model
+3. motor
+4. gearbox
+5. packageType
+6. color
+7.price
+
+
+Stock
+=====
+1. carCode
+2. quantity
+
+
+Clients
+=======
+1. clientCode
+2. firstName
+3. lastName
+4. cnp_cui
+5. email
+
+
+Sales
+=====
+1. clientCode
+2. carCode
+3. sellingDate
+4. sellingPrice
+5. quantity
+6. billNumber
+7. billDate
