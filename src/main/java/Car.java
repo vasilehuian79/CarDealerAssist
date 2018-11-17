@@ -3,7 +3,7 @@ public class Car {
     private String model;
     private String gearbox;
     private String versionType;
-    private String color[]={"ALB","NEGRU","ALBASTRU","GALBEN","GRI"};
+    private String color[]={"ALB","NEGRU","ALBASTRU","GALBEN","GRI","ROZ"};
     private int price;
 
     public Car(int carCode,String model,int price) {
