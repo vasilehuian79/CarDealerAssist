@@ -1,4 +1,5 @@
 import Car.Car;
+import Client.Client;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -10,7 +11,7 @@ import static java.nio.file.Files.readAllLines;
 public class CarAssist {
     private CarType cType;
     private Map<Car, Integer> carStock;
-    private Map<Customer, Integer> customersData;
+    private Map<Client, Integer> customersData;
 
     public String displayMenu(Map<Car, Integer> customersData, CarType cType) {
         String myMenu = "";
@@ -30,9 +31,9 @@ public class CarAssist {
 //        System.out.println("0 - Iesire");
     }
 
-    public Customer displayCustomer() {
-        for (Customer cust : customersData.keySet()) {
-            Customer customer = new Customer(customersData.get(cust));
+    public Client displayCustomer() {
+        for (Client cust : customersData.keySet()) {
+            Client client = new Client(customersData.get(cust));
             Scanner scanner = new Scanner(System.in);
             System.out.println(" Please enter your personal data below");
             System.out.print("Enter your first name:");
