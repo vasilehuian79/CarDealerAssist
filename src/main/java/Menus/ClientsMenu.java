@@ -32,10 +32,9 @@ public class ClientsMenu {
                 case 4:
                     break;
                 case 0:
-                    displayMainMenu();
+                    MainMenu.displayMainMenu();
                     break;
-            }
-            while (option != 0)
-        }
+            }}
+            while (option != 0);
     }
 }

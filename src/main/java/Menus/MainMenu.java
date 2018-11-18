@@ -23,15 +23,17 @@ public class MainMenu {
             System.out.println();
             switch (option) {
                 case 1:
+                    StockMenu.displayStockMenu();
                     break;
                 case 2:
+                    ClientsMenu.displayClientsMenu();
                     break;
                 case 3:
+                    StockMenu.displayStockMenu();
                     break;
                 case 0:
                     System.exit(0);
-            }
-            while (option != 0)
-        }
+            }}
+            while (option != 0);
     }
 }

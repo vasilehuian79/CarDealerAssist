@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CarCLI {
 
-    public Car readCar() {
+    public static Car readCar() {
 
         Car car = new Car();
         Scanner scanner = new Scanner(System.in);

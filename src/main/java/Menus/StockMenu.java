@@ -1,9 +1,14 @@
 package Menus;
 
+import Car.Car;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class StockMenu {
 
+    List<Car> carList = new ArrayList<>();
     public void displayStockMenu() {
 
         System.out.println("+-----------------------+");
@@ -26,10 +31,9 @@ public class StockMenu {
                 case 2:
                     break;
                 case 0:
-                    displayMainMenu();
+                    MainMenu.displayMainMenu();
                     break;
-            }
-            while (option != 0)
-        }
+            }}
+            while (option != 0);
     }
 }

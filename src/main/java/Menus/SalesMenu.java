@@ -26,11 +26,9 @@ public class SalesMenu {
                 case 2:
                     break;
                 case 0:
-                    displayMainMenu();
+                    MainMenu.displayMainMenu();
                     break;
-            }
-            while (option != 0)
-        }
+            }}
+            while (option != 0);
     }
-
 }
