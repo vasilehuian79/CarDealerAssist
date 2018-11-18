@@ -1,11 +1,13 @@
-public class Customer {
+package Client;
+
+public class Client {
     private int clientCode;
     private String firstName;
     private String lastName;
     private int ssn;
     private String email;
 
-    public Customer(int clientCode) {
+    public Client(int clientCode) {
         this.clientCode = clientCode;
     }
 
