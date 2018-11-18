@@ -26,7 +26,8 @@ public class SalesMenu {
                 case 2:
                     break;
                 case 0:
-                    // System.exit(0);
+                    displayMainMenu();
+                    break;
             }
             while (option != 0)
         }
