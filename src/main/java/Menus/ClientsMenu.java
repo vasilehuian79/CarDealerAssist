@@ -2,9 +2,11 @@ package Menus;
 
 import java.util.Scanner;
 
+import static Menus.MainMenu.displayMainMenu;
+
 public class ClientsMenu {
 
-    public void displayClientsMenu() {
+    public static void displayClientsMenu() {
 
         System.out.println("+-----------------------+");
         System.out.println("| *** Meniu clienti *** |");
@@ -13,7 +15,7 @@ public class ClientsMenu {
         System.out.println("\t2. Editeaza client");
         System.out.println("\t3. Sterge client");
         System.out.println("\t4. Vizualizeaza clienti");
-        System.out.println("\t0. Intoarcere la meniu principal");
+        System.out.println("\t0. Intoarcere la meniul principal");
 
         Scanner sc = new Scanner(System.in);
         int option;
@@ -32,7 +34,7 @@ public class ClientsMenu {
                 case 4:
                     break;
                 case 0:
-                    MainMenu.displayMainMenu();
+                    displayMainMenu();
                     break;
             }}
             while (option != 0);

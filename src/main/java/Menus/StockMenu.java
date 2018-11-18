@@ -1,22 +1,29 @@
 package Menus;
 
 import Car.Car;
+import Car.CarService;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static Car.CarCLI.displayCar;
+import static Car.CarCLI.readCar;
+import static Menus.MainMenu.displayMainMenu;
+
 public class StockMenu {
 
-    List<Car> carList = new ArrayList<>();
-    public void displayStockMenu() {
+    public static List<Car> carList = new ArrayList<>();
+
+    public static void displayStockMenu() {
 
         System.out.println("+-----------------------+");
         System.out.println("| *** Meniu stocuri *** |");
         System.out.println("+-----------------------+");
         System.out.println("\t1. Adauga masina");
-        System.out.println("\t2. Vizualizare stocuri");
-        System.out.println("\t0. Intoarcere la meniu principal");
+        System.out.println("\t2. Vizualizeaza tipuri de masini");
+        System.out.println("\t3. Vizualizare stocuri");
+        System.out.println("\t0. Intoarcere la meniul principal");
 
         Scanner sc = new Scanner(System.in);
         int option;
@@ -27,11 +34,15 @@ public class StockMenu {
             System.out.println();
             switch (option) {
                 case 1:
+                    CarService.addCar(readCar());
                     break;
                 case 2:
+                    displayCar(carList);
+                    break;
+                case 3:
                     break;
                 case 0:
-                    MainMenu.displayMainMenu();
+                    displayMainMenu();
                     break;
             }}
             while (option != 0);

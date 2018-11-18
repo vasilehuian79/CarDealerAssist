@@ -19,25 +19,15 @@ public class Car {
         return carCode;
     }
 
-    public void setCarCode(int carCode) {
-        this.carCode = carCode;
-    }
+    public void setCarCode(int carCode) { this.carCode = carCode; }
 
-    public String getModel() {
-        return model;
-    }
+    public String getModel() { return model; }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+    public void setModel(String model) {this.model = model; }
 
-    public String getVersionType() {
-        return versionType;
-    }
+    public String getVersionType() { return versionType; }
 
-    public void setVersionType(String versionType) {
-        this.versionType = versionType;
-    }
+    public void setVersionType(String versionType) { this.versionType = versionType; }
 
     public String getColor() {
         return color;

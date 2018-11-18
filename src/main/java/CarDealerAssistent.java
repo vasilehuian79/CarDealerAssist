@@ -29,6 +29,7 @@ public class CarDealerAssistent {
         }
 
         dType = dType.valueOf(lines.get(0));
+        System.out.println();
         System.out.println("Bun venit la dealerul " + dType);
     }
 

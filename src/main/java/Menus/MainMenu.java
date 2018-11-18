@@ -6,6 +6,7 @@ public class MainMenu {
 
     public static void displayMainMenu() {
 
+        ClearScreen.clearScreen();
         System.out.println("+-------------------------+");
         System.out.println("| *** Meniu principal *** |");
         System.out.println("+-------------------------+");
@@ -29,7 +30,7 @@ public class MainMenu {
                     ClientsMenu.displayClientsMenu();
                     break;
                 case 3:
-                    StockMenu.displayStockMenu();
+                    SalesMenu.displaySalesMenu();
                     break;
                 case 0:
                     System.exit(0);
