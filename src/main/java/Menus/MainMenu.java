@@ -9,10 +9,10 @@ public class MainMenu {
         System.out.println("+-------------------------+");
         System.out.println("| *** Meniu principal *** |");
         System.out.println("+-------------------------+");
-        System.out.println(" 1. Stocuri");
-        System.out.println(" 2. Clienti");
-        System.out.println(" 3. Vinzari");
-        System.out.println(" 0. Iesire");
+        System.out.println("\t1. Stocuri");
+        System.out.println("\t2. Clienti");
+        System.out.println("\t3. Vinzari");
+        System.out.println("\t0. Iesire");
 
         Scanner sc = new Scanner(System.in);
         int option;

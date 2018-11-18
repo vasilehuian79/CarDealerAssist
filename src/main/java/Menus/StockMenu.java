@@ -9,9 +9,9 @@ public class StockMenu {
         System.out.println("+-----------------------+");
         System.out.println("| *** Meniu stocuri *** |");
         System.out.println("+-----------------------+");
-        System.out.println(" 1. Adauga masina");
-        System.out.println(" 2. Vizualizare stocuri");
-        System.out.println(" 0. Intoarcere la meniu principal");
+        System.out.println("\t1. Adauga masina");
+        System.out.println("\t2. Vizualizare stocuri");
+        System.out.println("\t0. Intoarcere la meniu principal");
 
         Scanner sc = new Scanner(System.in);
         int option;

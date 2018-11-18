@@ -9,11 +9,11 @@ public class ClientsMenu {
         System.out.println("+-----------------------+");
         System.out.println("| *** Meniu clienti *** |");
         System.out.println("+-----------------------+");
-        System.out.println(" 1. Adauga client");
-        System.out.println(" 2. Editeaza client");
-        System.out.println(" 3. Sterge client");
-        System.out.println(" 4. Vizualizeaza clienti");
-        System.out.println(" 0. Intoarcere la meniu principal");
+        System.out.println("\t1. Adauga client");
+        System.out.println("\t2. Editeaza client");
+        System.out.println("\t3. Sterge client");
+        System.out.println("\t4. Vizualizeaza clienti");
+        System.out.println("\t0. Intoarcere la meniu principal");
 
         Scanner sc = new Scanner(System.in);
         int option;

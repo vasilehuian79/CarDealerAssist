@@ -9,9 +9,9 @@ public class SalesMenu {
         System.out.println("+-----------------------+");
         System.out.println("| *** Meniu vinzari *** |");
         System.out.println("+-----------------------+");
-        System.out.println(" 1. Adauga vinzare");
-        System.out.println(" 2. Vizualizare vinzari");
-        System.out.println(" 0. Intoarcere la meniu principal");
+        System.out.println("\t1. Adauga vinzare");
+        System.out.println("\t2. Vizualizare vinzari");
+        System.out.println("\t0. Intoarcere la meniu principal");
 
         Scanner sc = new Scanner(System.in);
         int option;
