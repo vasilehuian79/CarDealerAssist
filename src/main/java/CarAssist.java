@@ -13,7 +13,7 @@ public class CarAssist {
     private Map<Car, Integer> carStock;
     private Map<Client, Integer> customersData;
 
-    public String displayMenu(Map<Car, Integer> customersData, CarType cType) {
+    public String displayMenu(Map<Client, Integer> customersData, CarType cType) {
         String myMenu = "";
         myMenu = myMenu.concat(cType + " Dealer Asistant");
         myMenu = myMenu.concat("\n");

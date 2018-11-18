@@ -1,32 +1,18 @@
 package Car;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class CarCLI {
-    public Car buyCar() {
-        System.out.println("Pick a version by entering code from above: ");
-        Scanner version = new Scanner(System.in);
-        int option1 = version.nextInt();
-        System.out.println("You have selected"+carStock.get(lines.get));
-        System.out.println("Please select a package: ");
-        int option2=version.nextInt()
-        System.out.println(": ");
-        boolean ok = false;
-
-        if (option1 == 0) {
-            System.exit(0);
+    public void displayCar(Car car){
+        System.out.println();
+    }
+    public Car readCar() {
+            Car car = new Car();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println();
         }
-        for (Car c : carStock.keySet()) {
-            if (c.getCarCode() == option) {
-                Integer quantity = carStock.get(c);
-                if (quantity > 0) {
-                    ok = true;
-                    return c;
-
-                } else {
-                    System.out.println("Nu sunt masini suficiente in stoc");
-                    break;
-                }
-            }
-
+        return readCar();
+    }
 }
+
