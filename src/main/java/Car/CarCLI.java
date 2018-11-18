@@ -7,8 +7,10 @@ import java.util.Scanner;
 public class CarCLI {
 
     public Car readCar() {
+
         Car car = new Car();
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Introduceti codul: ");
         int codeCar = scanner.nextInt();
         System.out.println("Introduceti modelul: ");
@@ -19,8 +21,8 @@ public class CarCLI {
         String color = scanner.nextLine();
         System.out.println("Introduceti pretul: ");
         int price = scanner.nextInt();
-    return car;
-    }
 
+        return car;
+    }
 }
 

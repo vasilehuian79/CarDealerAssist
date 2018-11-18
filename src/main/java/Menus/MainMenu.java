@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainMenu {
 
-    public void displayMainMenu() {
+    public static void displayMainMenu() {
 
         System.out.println("+-------------------------+");
         System.out.println("| *** Meniu principal *** |");

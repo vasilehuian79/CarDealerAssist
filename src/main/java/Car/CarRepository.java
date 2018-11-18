@@ -1,11 +1,16 @@
 package Car;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 public class CarRepository {
-    List<Car> carList = new ArrayList<>();
+
     Car car = CarCLI.readCar();
-    carList.
+    List<Car> carList = new ArrayList<>();
+
+    public List<Car> addCar(Car car) {
+
+        carList.add(car);
+    }
+    return carList;
 }
