@@ -3,14 +3,15 @@ package Car;
 public class Car {
     private int carCode;
     private String model;
-    private String gearbox;
     private String versionType;
-    private String color[]={"ALB","NEGRU","ALBASTRU","GALBEN","GRI","ROZ"};
+    private String color;
     private int price;
 
-    public Car(int carCode,String model,int price) {
+    public Car() {
         this.carCode = carCode;
         this.model = model;
+        this.versionType = versionType;
+        this.color = color;
         this.price = price;
     }
 
@@ -28,14 +29,6 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
-    }
-
-    public String getGearbox() {
-        return gearbox;
-    }
-
-    public void setGearbox(String gearbox) {
-        this.gearbox = gearbox;
     }
 
     public String getVersionType() {
