@@ -9,6 +9,10 @@ public class CarService {
     public static List<Car> carList = StockMenu.carList;
     Car car = CarCLI.readCar();
 
+    public static void getAllModels{
+
+    }
+
     public static List<Car> addCar(Car car) {
         boolean ok = true;
         while (ok) {

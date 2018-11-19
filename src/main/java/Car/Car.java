@@ -6,6 +6,7 @@ public class Car {
     private String versionType;
     private String color;
     private int price;
+    private String gearbox;
 
     public Car() {
         this.carCode = carCode;
@@ -13,6 +14,15 @@ public class Car {
         this.versionType = versionType;
         this.color = color;
         this.price = price;
+        this.gearbox=gearbox;
+    }
+
+    public String getGearbox() {
+        return gearbox;
+    }
+
+    public void setGearbox(String gearbox) {
+        this.gearbox = gearbox;
     }
 
     public int getCarCode() {
