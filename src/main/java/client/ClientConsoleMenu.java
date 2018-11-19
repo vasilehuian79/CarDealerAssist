@@ -1,31 +1,39 @@
 package Client;
 
+import Menus.MainMenu;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import static Menus.MainMenu.displayMainMenu;
 
 public class ClientCLI {
 
-    public static void displayClientsMenu() throws IOException {
+    public static void displayClientsOption() throws IOException {
+        System.out.println("+-----------------------+");
+        System.out.println("| *** Clients Menu *** |");
+        System.out.println("+-----------------------+");
+        System.out.println("\t1. Add client");
+        System.out.println("\t2. Edit client");
+        System.out.println("\t3. Delete client");
+        System.out.println("\t4. Display all clients");
+        System.out.println("\t5. Return to the main menu");
+        System.out.print("\tSelect your option: ");
+    }
 
-        Scanner sc = new Scanner(System.in);
-        int option;
+    public void takeClientsOption() throws IOException {
 
-        do {
-            System.out.println("+-----------------------+");
-            System.out.println("| *** Meniu clienti *** |");
-            System.out.println("+-----------------------+");
-            System.out.println("\t1. Adauga client");
-            System.out.println("\t2. Editeaza client");
-            System.out.println("\t3. Sterge client");
-            System.out.println("\t4. Vizualizeaza clienti");
-            System.out.println("\t0. Intoarcere la meniul principal");
-            System.out.print("Alege o optiune: ");
-            option = sc.nextInt();
+        Scanner scanner = new Scanner( System.in );
+            int option;
+            do{
+                System.out.println("+-----------------------+");
+                System.out.println("| *** Clients Menu *** |");
+                System.out.println("+-----------------------+");
+//                System.out.print("Select your option: ");
+//                displayClientsOption();
+            option = scanner.nextInt();
             System.out.println();
             switch (option) {
                 case 1:
@@ -37,7 +45,7 @@ public class ClientCLI {
                 case 4:
                     break;
                 case 0:
-                    displayMainMenu();
+                    MainMenu.displayMainMenu();
                     break;
             }}
         while (option != 0);

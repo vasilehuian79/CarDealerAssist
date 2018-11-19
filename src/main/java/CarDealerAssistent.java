@@ -39,9 +39,9 @@ public class CarDealerAssistent {
     }
 }
 
-//    private Map<Client, Integer> customersData;
+//    private Map<client, Integer> customersData;
 //
-//    public String displayMenu(Map<Client, Integer> customersData, DealerType cType) {
+//    public String displayMenu(Map<client, Integer> customersData, DealerType cType) {
 //        String myMenu = "";
 //        myMenu = myMenu.concat(cType + " Dealer Asistant");
 //        myMenu = myMenu.concat("\n");
@@ -59,9 +59,9 @@ public class CarDealerAssistent {
 ////        System.out.println("0 - Iesire");
 //    }
 //
-//    public Client displayCustomer() {
-//        for (Client cust : customersData.keySet()) {
-//            Client client = new Client(customersData.get(cust));
+//    public client displayCustomer() {
+//        for (client cust : customersData.keySet()) {
+//            client client = new client(customersData.get(cust));
 //            Scanner scanner = new Scanner(System.in);
 //            System.out.println(" Please enter your personal data below");
 //            System.out.print("Enter your first name:");

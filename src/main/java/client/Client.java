@@ -1,4 +1,4 @@
-package Client;
+package client;
 
 public class Client {
     private int clientCode;
@@ -7,8 +7,14 @@ public class Client {
     private int ssn;
     private String email;
 
-    public Client(int clientCode) {
+    public Client() {};
+
+    public Client(int clientCode, String firstName, String lastName, int ssn, String email) {
         this.clientCode = clientCode;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ssn = ssn;
+        this.email = email;
     }
 
     public int getClientCode() {
