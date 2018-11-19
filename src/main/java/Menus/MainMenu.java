@@ -1,6 +1,6 @@
 package Menus;
 
-import Client.ClientsMenu;
+import Client.ClientCLI;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class MainMenu {
                     StockMenu.displayStockMenu();
                     break;
                 case 2:
-                    ClientsMenu.displayClientsMenu();
+                    ClientCLI.displayClientsMenu();
                     break;
                 case 3:
                     SalesMenu.displaySalesMenu();
