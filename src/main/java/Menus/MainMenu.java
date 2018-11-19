@@ -1,6 +1,6 @@
 package Menus;
 
-import Client.ClientCLI;
+import client.ClientConsoleMenu;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class MainMenu {
 
     public static void displayMainMenu() throws IOException {
+        ClientConsoleMenu clientConsoleMenu = new ClientConsoleMenu();
 
 //        ClearScreen.clearScreen();
         System.out.println("+-------------------------+");
@@ -17,12 +18,12 @@ public class MainMenu {
         System.out.println("\t2. Clienti");
         System.out.println("\t3. Vinzari");
         System.out.println("\t0. Iesire");
+        System.out.print("Alege o optiune: ");
 
         Scanner sc = new Scanner(System.in);
         int option;
-
         do {
-            System.out.print("Alege o optiune: ");
+//            System.out.print("Alege o optiune: ");
             option = sc.nextInt();
             System.out.println();
             switch (option) {
@@ -30,7 +31,7 @@ public class MainMenu {
                     StockMenu.displayStockMenu();
                     break;
                 case 2:
-                    ClientCLI.displayClientsMenu();
+                    clientConsoleMenu.takeClientsOption();
                     break;
                 case 3:
                     SalesMenu.displaySalesMenu();
