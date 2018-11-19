@@ -17,18 +17,17 @@ public class StockMenu {
 
     public static void displayStockMenu() {
 
-        System.out.println("+-----------------------+");
-        System.out.println("| *** Meniu stocuri *** |");
-        System.out.println("+-----------------------+");
-        System.out.println("\t1. Adauga masina");
-        System.out.println("\t2. Vizualizeaza tipuri de masini");
-        System.out.println("\t3. Vizualizare stocuri");
-        System.out.println("\t0. Intoarcere la meniul principal");
-
         Scanner sc = new Scanner(System.in);
         int option;
 
         do {
+            System.out.println("+-----------------------+");
+            System.out.println("| *** Meniu stocuri *** |");
+            System.out.println("+-----------------------+");
+            System.out.println("\t1. Adauga masina");
+            System.out.println("\t2. Vizualizeaza tipuri de masini");
+            System.out.println("\t3. Vizualizare stocuri");
+            System.out.println("\t0. Intoarcere la meniul principal");
             System.out.print("Alege o optiune: ");
             option = sc.nextInt();
             System.out.println();

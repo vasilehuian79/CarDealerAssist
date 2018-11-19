@@ -33,7 +33,7 @@ public class CarCLI {
         System.out.println("===========================================================");
 
         for (Car c : carList) {
-            System.out.println(c.getCarCode() + "\t\t" +
+            System.out.println("  "+c.getCarCode() + "\t\t" +
                     c.getModel() + "\t\t" +
                     c.getVersionType() + "\t\t" +
                     c.getColor() + "\t\t" +

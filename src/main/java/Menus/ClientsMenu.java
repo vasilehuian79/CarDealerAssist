@@ -8,19 +8,18 @@ public class ClientsMenu {
 
     public static void displayClientsMenu() {
 
-        System.out.println("+-----------------------+");
-        System.out.println("| *** Meniu clienti *** |");
-        System.out.println("+-----------------------+");
-        System.out.println("\t1. Adauga client");
-        System.out.println("\t2. Editeaza client");
-        System.out.println("\t3. Sterge client");
-        System.out.println("\t4. Vizualizeaza clienti");
-        System.out.println("\t0. Intoarcere la meniul principal");
-
         Scanner sc = new Scanner(System.in);
         int option;
 
         do {
+            System.out.println("+-----------------------+");
+            System.out.println("| *** Meniu clienti *** |");
+            System.out.println("+-----------------------+");
+            System.out.println("\t1. Adauga client");
+            System.out.println("\t2. Editeaza client");
+            System.out.println("\t3. Sterge client");
+            System.out.println("\t4. Vizualizeaza clienti");
+            System.out.println("\t0. Intoarcere la meniul principal");
             System.out.print("Alege o optiune: ");
             option = sc.nextInt();
             System.out.println();

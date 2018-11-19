@@ -29,21 +29,13 @@ public class Car {
 
     public void setVersionType(String versionType) { this.versionType = versionType; }
 
-    public String getColor() {
-        return color;
-    }
+    public String getColor() { return color; }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
+    public void setColor(String color) { this.color = color; }
 
-    public int getPrice() {
-        return price;
-    }
+    public int getPrice() { return price; }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
+    public void setPrice(int price) { this.price = price; }
 }
 
 
