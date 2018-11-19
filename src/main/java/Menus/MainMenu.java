@@ -1,5 +1,7 @@
 package Menus;
 
+import Client.ClientsMenu;
+
 import java.io.IOException;
 import java.util.Scanner;
 

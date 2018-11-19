@@ -13,6 +13,11 @@ public class ClientService {
     }
 
     public boolean addClient(Client client) {
+
+
+
+
+
         // Save the client on the database/ file
         return true;
     }
