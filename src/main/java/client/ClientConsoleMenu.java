@@ -1,91 +1,98 @@
-package Client;
+package client;
 
 import Menus.MainMenu;
 
 import java.io.IOException;
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 
-public class ClientCLI {
+public class ClientConsoleMenu {
+    ClientService clientService = new ClientService();
+    ClientConsoleWriter clientWriter = new ClientConsoleWriter();
+    ClientConsoleReader clientReader = new ClientConsoleReader();
 
-    public static void displayClientsOption() throws IOException {
-        System.out.println("+-----------------------+");
-        System.out.println("| *** Clients Menu *** |");
-        System.out.println("+-----------------------+");
+    private void displayClientsOption() throws IOException {
         System.out.println("\t1. Add client");
         System.out.println("\t2. Edit client");
         System.out.println("\t3. Delete client");
         System.out.println("\t4. Display all clients");
-        System.out.println("\t5. Return to the main menu");
+        System.out.println("\t0. Return to the main menu");
         System.out.print("\tSelect your option: ");
     }
 
     public void takeClientsOption() throws IOException {
 
-        Scanner scanner = new Scanner( System.in );
-            int option;
-            do{
-                System.out.println("+-----------------------+");
-                System.out.println("| *** Clients Menu *** |");
-                System.out.println("+-----------------------+");
+        Scanner scanner = new Scanner(System.in);
+        int option;
+        System.out.println("+-----------------------+");
+        System.out.println("| *** Clients Menu ***  |");
+        System.out.println("+-----------------------+");
+        do {
+            displayClientsOption();
+
 //                System.out.print("Select your option: ");
 //                displayClientsOption();
             option = scanner.nextInt();
             System.out.println();
             switch (option) {
                 case 1:
+                    addClient();
                     break;
                 case 2:
+                    editClientEmail();
                     break;
                 case 3:
+                    deleteClient();
                     break;
                 case 4:
+                    displayAllClients();
                     break;
                 case 0:
                     MainMenu.displayMainMenu();
                     break;
-            }}
-        while (option != 0);
+            }
+
+        } while (option != 0);
+
     }
 
-    public static Integer generateRandomClientId() {
-        //Generated a random id between 4-10 characters
-        int clientId = 0;
-        int max = 10;
-        int min = 4;
-        int diff = max - min;
-        Random rn = new Random();
-        int i = rn.nextInt(diff + 1);
-        i += min;
 
-        return clientId;
+    private void displayAllClients() {
+        List<Client> allClients = clientService.getAllClients();
+        for (Client client : allClients) {
+            clientWriter.displayClientData(client);
+        }
     }
 
-    public Client getClientData(Client client) {
-        // Client client = new Client(generateRandomClientId());
+    private void addClient() {
+        ClientConsoleReader consoleReader = new ClientConsoleReader();
+        Client client = clientReader.readClientData();
+        clientService.addClient(client);
+        System.out.println("Client successfully added.");
 
+    }
+
+    private void deleteClient() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Adding a new client");
-
-        System.out.println("Please enter your First Name");
-        String firstName = scanner.next();
-        client.setFirstName(firstName);
-
-        System.out.println("Please enter your Last Name");
-        String lastName = scanner.next();
-        client.setLastName(lastName);
-
-        System.out.println("Please enter your SSN");
-        Integer ssn = scanner.nextInt();
-        client.setSsn(ssn);
-
-        System.out.println("Please enter your email address");
-        String email = scanner.next();
-        client.setEmail(email);
-
-        return client;
+        System.out.println("Which client do you want to delete? Enter ID : ");
+        int id = scanner.nextInt();
+        Client client = clientService.getClientById(id);
+        clientService.deleteClient(client);
+        System.out.println("client successfully deleted.");
     }
+
+    private void editClientEmail() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Which client do you want to edit? Enter ID : ");
+        int id = scanner.nextInt();
+        Client client = clientService.getClientById(id);
+        client = clientReader.editClientEmail(client);
+        clientService.updateClient(client);
+        System.out.println("Client data successfully updated.");
+
+    }
+
+
 }
