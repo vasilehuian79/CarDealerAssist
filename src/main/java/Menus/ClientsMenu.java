@@ -1,12 +1,13 @@
 package Menus;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static Menus.MainMenu.displayMainMenu;
 
 public class ClientsMenu {
 
-    public static void displayClientsMenu() {
+    public static void displayClientsMenu() throws IOException {
 
         Scanner sc = new Scanner(System.in);
         int option;

@@ -3,6 +3,7 @@ package Menus;
 import Car.Car;
 import Car.CarService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ public class StockMenu {
 
     public static List<Car> carList = new ArrayList<>();
 
-    public static void displayStockMenu() {
+    public static void displayStockMenu() throws IOException {
 
         Scanner sc = new Scanner(System.in);
         int option;

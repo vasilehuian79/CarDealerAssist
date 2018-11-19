@@ -10,9 +10,9 @@ public class CarCLI {
         Car car = new Car();
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Introduceti codul (0 = Iesire) : ");
+        System.out.print(" - Introduceti codul (0 = Iesire) : ");
         car.setCarCode(sc.nextInt());
-        if(car.getCarCode() != 0) {
+        if (car.getCarCode() != 0) {
             System.out.print(" - Introduceti modelul            : ");
             car.setModel(sc.nextLine());
             System.out.print(" - Introduceti nivelul de echipare: ");

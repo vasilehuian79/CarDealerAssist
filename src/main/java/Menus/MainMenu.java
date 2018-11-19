@@ -1,12 +1,13 @@
 package Menus;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class MainMenu {
 
-    public static void displayMainMenu() {
+    public static void displayMainMenu() throws IOException {
 
-        ClearScreen.clearScreen();
+//        ClearScreen.clearScreen();
         System.out.println("+-------------------------+");
         System.out.println("| *** Meniu principal *** |");
         System.out.println("+-------------------------+");

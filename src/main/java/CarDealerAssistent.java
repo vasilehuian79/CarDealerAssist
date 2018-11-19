@@ -1,11 +1,11 @@
 import Car.Car;
-import Client.Client;
 import Menus.MainMenu;
 
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 import static java.nio.file.Files.readAllLines;
 
@@ -34,7 +34,7 @@ public class CarDealerAssistent {
     }
 
 
-    public void start() {
+    public void start() throws IOException {
         MainMenu.displayMainMenu();
     }
 }
