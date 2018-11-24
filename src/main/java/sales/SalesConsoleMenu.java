@@ -1,6 +1,6 @@
 package sales;
 
-import Menus.MainMenu;
+import menus.MainMenu;
 
 import java.io.IOException;
 import java.util.List;

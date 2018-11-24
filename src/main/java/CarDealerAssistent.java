@@ -1,6 +1,6 @@
-import Car.Car;
-import Car.CarDealerType;
-import Menus.MainMenu;
+import car.Car;
+import car.CarDealerType;
+import menus.MainMenu;
 
 import java.io.IOException;
 import java.nio.file.Path;

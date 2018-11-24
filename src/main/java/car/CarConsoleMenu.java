@@ -1,11 +1,11 @@
-package Car;
+package car;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static Menus.MainMenu.displayMainMenu;
+import static menus.MainMenu.displayMainMenu;
 
 public class CarConsoleMenu {
 

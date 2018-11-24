@@ -1,28 +1,40 @@
-package client;
+package Client;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientService {
-    ClientConsoleReader clientReader = new ClientConsoleReader();
-    ClientStorage clientStorage = new ClientStorage();
 
-    public Client getClientById(int id){
-        return clientStorage.getById(id);
+    public void start() {
+        Client client = new Client(ClientCLI.generateRandomClientId());
+        ClientCLI cli = new ClientCLI();
+        cli.getClientData(client);
+        this.addClient(client);
     }
 
-    public List<Client> getAllClients(){
-        return clientStorage.getAll();
+    public boolean addClient(Client client) {
+
+
+
+
+
+        // Save the client on the database/ file
+        return true;
     }
 
-    public void addClient(Client client){
-        clientStorage.add(client);
+    public Client findClient(int clientCode) {
+        // Must read from database/ file based on client code and will return the Client
+        // If database is used this should be the SQL query:
+        // SELECT * from ClientTable WHERE ClientTable.clientCode = clientCode
+        return new Client(clientCode);
     }
 
-    public void deleteClient(Client client){
-        clientStorage.delete(client);
-    }
-
-    public void updateClient(Client client){
-        clientStorage.update(client);
+    public List<Client> displayAllClients() {
+        // If you are using a Database, do a SELECT * clients
+        // If you are using a TextFile, get all clients from the .txt/ .json file
+        List<Client> list = new ArrayList<Client>();
+        // You will need to get clients and add these to the bellow list in the following manner:
+        // list.add(findClient(clientCode));
+        return list;
     }
 }
