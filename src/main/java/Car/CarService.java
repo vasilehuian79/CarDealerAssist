@@ -1,10 +1,37 @@
 package Car;
 
-import Menus.StockMenu;
-
 import java.util.List;
 
 public class CarService {
+
+    CarConsoleReader carReader = new CarConsoleReader();
+    CarStorage carStorage = new CarStorage();
+
+    public Car getCarById(int id) {
+        return carStorage.getById(id);
+    }
+
+    public List<Car> getAllCars() {
+        return carStorage.getAll();
+    }
+
+    public void addCar(Car car) {
+        carStorage.add(car);
+    }
+
+    public void deleteCar(Car car) {
+        carStorage.delete(car);
+    }
+
+    public void updateCar(Car car) {
+        carStorage.update(car);
+    }
+}
+
+
+
+
+
 
 //    public static List<Car> carList = StockMenu.carList;
 //    Car car = CarCLI.readCar();
@@ -41,4 +68,4 @@ public class CarService {
 //        }
 //        return found;
 //    }
-}
+
