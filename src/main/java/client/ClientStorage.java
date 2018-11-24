@@ -6,6 +6,7 @@ import java.util.List;
 
 public class ClientStorage extends GenericStore<Client>{
     private List<Client> clientList = new ArrayList<>();
+//    test
 
 
     @Override
