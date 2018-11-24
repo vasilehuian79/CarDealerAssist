@@ -5,7 +5,7 @@ import java.util.List;
 public class ClientService {
     ClientConsoleReader clientReader = new ClientConsoleReader();
     ClientStorage clientStorage = new ClientStorage();
-
+//    ?test
     public Client getClientById(int id){
         return clientStorage.getById(id);
     }
