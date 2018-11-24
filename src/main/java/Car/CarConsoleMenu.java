@@ -1,8 +1,8 @@
 package Car;
 
 import java.io.IOException;
-import java.security.PrivateKey;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import static Menus.MainMenu.displayMainMenu;
@@ -39,16 +39,16 @@ public class CarConsoleMenu {
             System.out.println();
             switch (option) {
                 case 1:
-                    addCar(car);
+//                    addCar(car);
                     break;
                 case 2:
-                    editCar(car);
+//                    editCar(car);
                     break;
                 case 3:
-                    updateCar(car);
+//                    updateCar(car);
                     break;
                 case 4:
-                    displayAllCars();
+//                    displayAllCars();
                     break;
                 case 0:
                     displayMainMenu();

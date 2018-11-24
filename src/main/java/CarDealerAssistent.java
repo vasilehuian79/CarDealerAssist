@@ -1,4 +1,5 @@
 import Car.Car;
+import Car.CarDealerType;
 import Menus.MainMenu;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ import static java.nio.file.Files.readAllLines;
 
 public class CarDealerAssistent {
 
-    private DealerType dType;
+    private CarDealerType dType;
     private Map<Car, Integer> carStock;
 
     public CarDealerAssistent(String filePath) {

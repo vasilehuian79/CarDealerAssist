@@ -1,13 +1,11 @@
 package Menus;
 
 import Car.Car;
-import Car.CarService;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 
 import static Menus.MainMenu.displayMainMenu;
 
@@ -33,10 +31,10 @@ public class StockMenu {
             System.out.println();
             switch (option) {
                 case 1:
-                    CarService.addCar(readCar());
+//                    CarService.addCar(readCar());
                     break;
                 case 2:
-                    displayCar(carList);
+//                    displayCar(carList);
                     break;
                 case 3:
                     break;
