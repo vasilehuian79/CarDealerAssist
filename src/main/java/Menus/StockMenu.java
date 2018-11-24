@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static Car.CarCLI.displayCar;
-import static Car.CarCLI.readCar;
+
 import static Menus.MainMenu.displayMainMenu;
 
 public class StockMenu {

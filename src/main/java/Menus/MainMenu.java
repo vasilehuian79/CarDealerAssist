@@ -1,6 +1,8 @@
 package Menus;
 
 import client.ClientConsoleMenu;
+import sales.Sales;
+import sales.SalesConsoleMenu;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -9,6 +11,7 @@ public class MainMenu {
 
     public static void displayMainMenu() throws IOException {
         ClientConsoleMenu clientConsoleMenu = new ClientConsoleMenu();
+        SalesConsoleMenu salesConsoleMenu = new SalesConsoleMenu();
 
 //        ClearScreen.clearScreen();
         System.out.println("+-------------------------+");
@@ -34,7 +37,7 @@ public class MainMenu {
                     clientConsoleMenu.takeClientsOption();
                     break;
                 case 3:
-                    SalesMenu.displaySalesMenu();
+                    salesConsoleMenu.takeClientsOption();
                     break;
                 case 0:
                     System.exit(0);
