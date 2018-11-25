@@ -10,7 +10,7 @@ public class SalesConsoleReader {
     public Sales readSalesData() {
         Sales sales = new Sales();
         ClientService clientService = ClientService.getInstance();
-        CarService carService = new CarService();
+        CarService carService = CarService.getInstance();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Adding a new order");
