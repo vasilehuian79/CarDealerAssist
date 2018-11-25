@@ -15,7 +15,7 @@ public class CarConsoleWriter {
         public void displayAllCars(List<Car> carList) {
             for (Car c: carList) {
                 displayCarData(c);
-                System.out.println("-------------------------------");
+                System.out.println("--------------------------------------");
             }
         }
 }
