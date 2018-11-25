@@ -46,7 +46,7 @@ public class CarConsoleMenu {
                         if (initial_car != null) {
                             ok = true;
                         } else {
-                            System.out.println("Code " + carId + " doesn't exist! Try again...");
+                            System.out.println("CarCode " + carId + " doesn't exist! Try again...");
                         }
                     }
                     Car new_car = carConsoleReader.readCarData();
