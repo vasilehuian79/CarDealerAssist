@@ -9,12 +9,7 @@ public class Car {
     private String gearbox;
 
     public Car() {
-        this.carCode = carCode;
-        this.model = model;
-        this.versionType = versionType;
-        this.color = color;
-        this.price = price;
-        this.gearbox=gearbox;
+
     }
 
     public String getGearbox() {

@@ -66,7 +66,6 @@ public class ClientConsoleMenu {
     }
 
     private void addClient() {
-        ClientConsoleReader consoleReader = new ClientConsoleReader();
         Client client = clientReader.readClientData();
         clientService.addClient(client);
         System.out.println("Client successfully added.");
