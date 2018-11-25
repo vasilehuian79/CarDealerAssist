@@ -1,8 +1,6 @@
 package car;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import static menus.MainMenu.displayMainMenu;
@@ -12,7 +10,6 @@ public class CarConsoleMenu {
     static CarService carService = CarService.getInstance();
     static CarConsoleReader carConsoleReader = new CarConsoleReader();
     static CarConsoleWriter carConsoleWriter = new CarConsoleWriter();
-    static CarStorage carStorage = CarStorage.getInstance();
     CarDealerType dealerType;
 
     public static void displayStockOption() throws IOException {
@@ -26,8 +23,6 @@ public class CarConsoleMenu {
         System.out.println("\t0. Return to the main menu");
         System.out.print(" Select your option: ");
     }
-
-    public static List<Car> carList = new ArrayList<>();
 
     public static void displayStockMenu() throws IOException {
 
@@ -43,10 +38,21 @@ public class CarConsoleMenu {
                     carService.addCar(carConsoleReader.readCarData());
                     break;
                 case 2:
-                    carService.updateCar(carConsoleReader.readCarData());
+                    Boolean ok = false;
+                    int carId = -1;
+                    while (!ok) {
+                        carId = carConsoleReader.readCarCode();
+                        Car initial_car = carService.getCarById(carId);
+                        if (initial_car != null) {
+                            ok = true;
+                        }
+                    }
+                    Car new_car = carConsoleReader.readCarData();
+                    new_car.setCarCode(carId);
+                    carService.updateCar(new_car);
                     break;
                 case 3:
-                    carService.deleteCar(carStorage.getById(carConsoleReader.readCarCode()));
+                    carService.deleteCar(carService.getCarById(carConsoleReader.readCarCode()));
                     break;
                 case 4:
                     carConsoleWriter.displayAllCars(carService.getAllCars());

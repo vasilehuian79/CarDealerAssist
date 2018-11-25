@@ -8,10 +8,7 @@ public class CarConsoleReader {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print(" - Please enter car code: ");
-        int carCode = scanner.nextInt();
-        scanner.nextLine();
-
-        return carCode;
+        return scanner.nextInt();
     }
 
     public Car readCarData() {

@@ -8,8 +8,8 @@ import java.util.List;
 public class CarStorage extends GenericStore<Car> {
 
     private List<Car> carList = new ArrayList();
-    private CarStorage() {
-    }
+
+    private CarStorage() {}
 
     private static CarStorage carStorage = new CarStorage();
 
