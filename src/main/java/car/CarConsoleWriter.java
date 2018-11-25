@@ -1,5 +1,7 @@
 package car;
 
+import java.util.List;
+
 public class CarConsoleWriter {
 
         public void displayCarData(Car car) {
@@ -8,5 +10,11 @@ public class CarConsoleWriter {
                     car.getVersionType() + "\t" +
                     car.getColor() + "\t" +
                     car.getPrice());
+        }
+
+        public void displayAllCars(List<Car> carList) {
+            for (Car c: carList) {
+                displayCarData(c);
+            }
         }
 }

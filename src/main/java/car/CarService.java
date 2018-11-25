@@ -4,7 +4,7 @@ import java.util.List;
 
 public class CarService {
 
-    CarConsoleReader carReader = new CarConsoleReader();
+//    CarConsoleReader carReader = new CarConsoleReader();
     CarStorage carStorage = new CarStorage();
 
     public Car getCarById(int id) {

@@ -39,16 +39,16 @@ public class CarConsoleMenu {
             System.out.println();
             switch (option) {
                 case 1:
-//                    addCar(car);
+                    carService.addCar(carConsoleReader.readCarData());
                     break;
                 case 2:
-//                    editCar(car);
+                    carService.updateCar(carConsoleReader.readCarData());
                     break;
                 case 3:
-//                    updateCar(car);
+                    carService.deleteCar(carConsoleReader.readCarData());
                     break;
                 case 4:
-//                    displayAllCars();
+                    carConsoleWriter.displayAllCars(carService.getAllCars());
                     break;
                 case 0:
                     displayMainMenu();

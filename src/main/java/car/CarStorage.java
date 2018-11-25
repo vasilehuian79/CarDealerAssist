@@ -3,7 +3,7 @@ package car;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarStorage extends client.GenericStore<Car> {
+public class CarStorage extends clientv2.GenericStore<Car> {
 
     private List<Car> carList = new ArrayList();
 

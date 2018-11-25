@@ -1,10 +1,8 @@
 package sales;
 
 
-import client.Client;
-import client.ClientService;
+import clientv2.ClientService;
 
-import java.util.Date;
 import java.util.Scanner;
 
 public class SalesConsoleReader {

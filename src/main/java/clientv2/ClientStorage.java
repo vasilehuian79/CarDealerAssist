@@ -1,7 +1,5 @@
-package Client;
+package clientv2;
 
-import javax.crypto.Cipher;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClientStorage {

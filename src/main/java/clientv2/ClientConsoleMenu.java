@@ -1,9 +1,8 @@
-package client;
+package clientv2;
 
-import Menus.MainMenu;
+import menus.MainMenu;
 
 import java.io.IOException;
-
 import java.util.List;
 import java.util.Scanner;
 
