@@ -21,7 +21,7 @@ public class MainMenu {
         System.out.println("\t2. Clients");
         System.out.println("\t3. Sales");
         System.out.println("\t0. Exit");
-        System.out.print("Choose your option: ");
+        System.out.print(" Select your option: ");
 
         Scanner sc = new Scanner(System.in);
         int option;

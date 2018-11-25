@@ -9,9 +9,10 @@ import static menus.MainMenu.displayMainMenu;
 
 public class CarConsoleMenu {
 
-    static CarService carService = new CarService();
+    static CarService carService = CarService.getInstance();
     static CarConsoleReader carConsoleReader = new CarConsoleReader();
     static CarConsoleWriter carConsoleWriter = new CarConsoleWriter();
+    static CarStorage carStorage = new CarStorage();
     CarDealerType dealerType;
 
     public static void displayStockOption() throws IOException {
@@ -23,7 +24,7 @@ public class CarConsoleMenu {
         System.out.println("\t3. Delete car model");
         System.out.println("\t4. Display all cars");
         System.out.println("\t0. Return to the main menu");
-        System.out.println("\t Select your option: ");
+        System.out.print(" Select your option: ");
     }
 
     public static List<Car> carList = new ArrayList<>();
@@ -45,7 +46,7 @@ public class CarConsoleMenu {
                     carService.updateCar(carConsoleReader.readCarData());
                     break;
                 case 3:
-                    carService.deleteCar(carConsoleReader.readCarData());
+                    carService.deleteCar(carStorage.getById(carConsoleReader.readCarCode()));
                     break;
                 case 4:
                     carConsoleWriter.displayAllCars(carService.getAllCars());

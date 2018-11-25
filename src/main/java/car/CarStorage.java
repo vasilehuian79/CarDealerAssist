@@ -18,11 +18,11 @@ public class CarStorage extends GenericStore<Car> {
 
     private int generateId() {
         int max = 0;
-                for(Car car : carList) {
-                    if(max < car.getCarCode()) {
-                        max = car.getCarCode();
-                    }
-                }
+             for(Car car : carList) {
+                 if(max < car.getCarCode()) {
+                     max = car.getCarCode();
+                 }
+             }
         return max + 1;
     }
 

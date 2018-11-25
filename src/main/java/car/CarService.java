@@ -7,6 +7,13 @@ public class CarService {
 //    CarConsoleReader carReader = new CarConsoleReader();
     CarStorage carStorage = new CarStorage();
 
+    private CarService() {
+    }
+
+    private static CarService carService = new CarService();
+
+    public static CarService getInstance() { return carService ;};
+
     public Car getCarById(int id) {
         return carStorage.getById(id);
     }
@@ -26,6 +33,7 @@ public class CarService {
     public void updateCar(Car car) {
         carStorage.update(car);
     }
+
 }
 
 
