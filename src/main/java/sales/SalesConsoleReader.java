@@ -44,7 +44,13 @@ public class SalesConsoleReader {
         sales.setCar(car);
 
         System.out.println("Please enter your quantity");
-        int quantity = scanner.nextInt();
+        int quantity = 0;
+        while (quantity <= 0) {
+            if (quantity <= 0) {
+                System.out.println("Please check the quantity desired and retry!");
+            }
+            quantity = scanner.nextInt();
+        }
         sales.setQuantity(quantity);
 
         return sales;
