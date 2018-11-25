@@ -1,8 +1,11 @@
 package sales;
 
 
+import car.Car;
 import car.CarService;
+import client.Client;
 import client.ClientService;
+import client.ClientStorage;
 
 import java.util.Scanner;
 
@@ -14,14 +17,31 @@ public class SalesConsoleReader {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Adding a new order");
+        Client client = null;
+        while (client == null) {
+            System.out.println("Add client ID:");
+            int idClient = scanner.nextInt();
+            client = clientService.getClientById(idClient);
+            if (client == null) {
+                System.out.println("Client code doesn`t exist!!!");
+            }
+        }
+        sales.setClient(client);
 
-        System.out.println("Please enter your client code");
-        int idClient = scanner.nextInt();
-        clientService.getClientById(idClient);
 
         System.out.println("Please enter your car code");
-        int idCar = scanner.nextInt();
-        carService.getCarById(idCar);
+
+        Car car = null;
+        while (car == null) {
+            System.out.println("Add car ID:");
+            int idCar = scanner.nextInt();
+            car = carService.getCarById(idCar);
+            if (car == null) {
+                System.out.println("Car code doesn`t exist!!!");
+            }
+        }
+
+        sales.setCar(car);
 
         System.out.println("Please enter your quantity");
         int quantity = scanner.nextInt();
