@@ -1,10 +1,19 @@
 package client;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClientStorage extends GenericStore<Client> {
+
     private List<Client> clientList = new ArrayList<>();
+
+    private static final String filePath = "D:/Clients.json";
 
     @Override
     public Client add(Client value) {
@@ -50,5 +59,15 @@ public class ClientStorage extends GenericStore<Client> {
             }
         }
         return null;
+    }
+
+    protected void writeJson() {
+        try (Writer writer = new FileWriter(filePath)) {
+            Gson gson = new GsonBuilder().create();
+            gson.toJson(getAll(), writer);
+        } catch (IOException e) {
+            System.out.println("Exception occured: " + e.getMessage());
+        }
+
     }
 }
