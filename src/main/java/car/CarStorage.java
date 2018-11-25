@@ -1,7 +1,12 @@
 package car;
 
 import client.GenericStore;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +20,15 @@ public class CarStorage extends GenericStore<Car> {
 
     public static CarStorage getInstance() { return carStorage ;};
 
+    private static final String filePath = "D:/Cars.json";
+
+    
+
     @Override
     public Car add(Car value) {
         value.setCarCode(generateId());
         carList.add(value);
+        writeJson();
         return value;
     }
 
@@ -57,5 +67,16 @@ public class CarStorage extends GenericStore<Car> {
             }
         }
         return null;
+    }
+
+
+    protected void writeJson() {
+        try (Writer writer = new FileWriter(filePath)) {
+            Gson gson = new GsonBuilder().create();
+            gson.toJson(getAll(), writer);
+        } catch (IOException e) {
+            System.out.println("Exception occured: " + e.getMessage());
+        }
+
     }
 }
