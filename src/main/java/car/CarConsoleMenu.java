@@ -9,26 +9,26 @@ import static menus.MainMenu.displayMainMenu;
 
 public class CarConsoleMenu {
 
-    CarService carService = new CarService();
-    CarConsoleReader carConsoleReader = new CarConsoleReader();
-    CarConsoleWriter carConsoleWriter = new CarConsoleWriter();
+    static CarService carService = new CarService();
+    static CarConsoleReader carConsoleReader = new CarConsoleReader();
+    static CarConsoleWriter carConsoleWriter = new CarConsoleWriter();
     CarDealerType dealerType;
 
-    private void displayStockOption() throws IOException {
+    public static void displayStockOption() throws IOException {
         System.out.println("+--------------------+");
         System.out.println("| *** Stock menu *** |");
         System.out.println("+--------------------+");
-        System.out.print("\t1. Add car model");
-        System.out.print("\t2. Edit car model");
-        System.out.print("\t3. Delete car model");
-        System.out.print("\t4. Display all cars");
-        System.out.print("\t0. Return to the main menu");
-        System.out.print("\t Select your option: ");
+        System.out.println("\t1. Add car model");
+        System.out.println("\t2. Edit car model");
+        System.out.println("\t3. Delete car model");
+        System.out.println("\t4. Display all cars");
+        System.out.println("\t0. Return to the main menu");
+        System.out.println("\t Select your option: ");
     }
 
     public static List<Car> carList = new ArrayList<>();
 
-    public void displayStockMenu() throws IOException {
+    public static void displayStockMenu() throws IOException {
 
         Scanner sc = new Scanner(System.in);
         int option;

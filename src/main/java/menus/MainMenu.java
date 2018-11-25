@@ -1,5 +1,6 @@
 package menus;
 
+import car.CarConsoleMenu;
 import client.ClientConsoleMenu;
 import sales.SalesConsoleMenu;
 
@@ -13,14 +14,14 @@ public class MainMenu {
         SalesConsoleMenu salesConsoleMenu = new SalesConsoleMenu();
 
 //        ClearScreen.clearScreen();
-        System.out.println("+-------------------------+");
-        System.out.println("| *** Meniu principal *** |");
-        System.out.println("+-------------------------+");
-        System.out.println("\t1. Stocuri");
-        System.out.println("\t2. Clienti");
-        System.out.println("\t3. Vinzari");
-        System.out.println("\t0. Iesire");
-        System.out.print("Alege o optiune: ");
+        System.out.println("+-------------------+");
+        System.out.println("| *** Main menu *** |");
+        System.out.println("+-------------------+");
+        System.out.println("\t1. Stocks");
+        System.out.println("\t2. Clients");
+        System.out.println("\t3. Sales");
+        System.out.println("\t0. Exit");
+        System.out.print("Choose your option: ");
 
         Scanner sc = new Scanner(System.in);
         int option;
@@ -30,7 +31,7 @@ public class MainMenu {
             System.out.println();
             switch (option) {
                 case 1:
-                    StockMenu.displayStockMenu();
+                    CarConsoleMenu.displayStockMenu();
                     break;
                 case 2:
                     clientConsoleMenu.takeClientsOption();
