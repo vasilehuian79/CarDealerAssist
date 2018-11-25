@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class ClientConsoleMenu {
-    ClientService clientService = new ClientService();
+    ClientService clientService = ClientService.getInstance();
     ClientConsoleWriter clientWriter = new ClientConsoleWriter();
     ClientConsoleReader clientReader = new ClientConsoleReader();
 

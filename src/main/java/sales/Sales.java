@@ -1,32 +1,29 @@
 package sales;
 
+import car.Car;
+import client.Client;
+
 import java.util.Date;
 
 
 public class Sales {
     int saleID;
-    int clientCode;
-    int carCode;
+    Client client;
+    Car car;
     Date sellingDate;
-    int sellingPrice;
     int quantity;
-    int billNumber;
-    Date billDate;
     int totalValue;
 
     public Sales() {
 
     }
 
-    public Sales(int clientCode, int carCode, Date sellingDate, int sellingPrice, int quantity, int billNumber, Date billDate, int totalValue) {
-        this.clientCode = clientCode;
+    public Sales(int saleID, Client client, Car car, Date sellingDate, int quantity, int totalValue) {
         this.saleID = saleID;
-        this.carCode = carCode;
+        this.client = client;
+        this.car = car;
         this.sellingDate = sellingDate;
-        this.sellingPrice = sellingPrice;
         this.quantity = quantity;
-        this.billNumber = billNumber;
-        this.billDate = billDate;
         this.totalValue = totalValue;
     }
 
@@ -38,28 +35,20 @@ public class Sales {
         this.saleID = saleID;
     }
 
-    public int getTotalValue() {
-        return totalValue;
+    public Client getClient() {
+        return client;
     }
 
-    public void setTotalValue(int totalValue) {
-        this.totalValue = totalValue;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
-    public int getClientCode() {
-        return clientCode;
+    public Car getCar() {
+        return car;
     }
 
-    public void setClientCode(int clientCode) {
-        this.clientCode = clientCode;
-    }
-
-    public int getCarCode() {
-        return carCode;
-    }
-
-    public void setCarCode(int carCode) {
-        this.carCode = carCode;
+    public void setCar(Car car) {
+        this.car = car;
     }
 
     public Date getSellingDate() {
@@ -70,14 +59,6 @@ public class Sales {
         this.sellingDate = sellingDate;
     }
 
-    public int getSellingPrice() {
-        return sellingPrice;
-    }
-
-    public void setSellingPrice(int sellingPrice) {
-        this.sellingPrice = sellingPrice;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -86,19 +67,11 @@ public class Sales {
         this.quantity = quantity;
     }
 
-    public int getBillNumber() {
-        return billNumber;
+    public int getTotalValue() {
+        return totalValue;
     }
 
-    public void setBillNumber(int billNumber) {
-        this.billNumber = billNumber;
-    }
-
-    public Date getBillDate() {
-        return billDate;
-    }
-
-    public void setBillDate(Date billDate) {
-        this.billDate = billDate;
+    public void setTotalValue(int totalValue) {
+        this.totalValue = totalValue;
     }
 }
