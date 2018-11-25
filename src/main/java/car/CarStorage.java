@@ -28,7 +28,7 @@ public class CarStorage extends GenericStore<Car> {
     public Car add(Car value) {
         value.setCarCode(generateId());
         carList.add(value);
-        writeJson();
+        writeJson(value);
         return value;
     }
 
@@ -70,10 +70,10 @@ public class CarStorage extends GenericStore<Car> {
     }
 
 
-    protected void writeJson() {
+    protected void writeJson(Car car) {
         try (Writer writer = new FileWriter(filePath)) {
             Gson gson = new GsonBuilder().create();
-            gson.toJson(getAll(), writer);
+            gson.toJson(car, writer);
         } catch (IOException e) {
             System.out.println("Exception occured: " + e.getMessage());
         }

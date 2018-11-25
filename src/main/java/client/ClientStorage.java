@@ -19,6 +19,7 @@ public class ClientStorage extends GenericStore<Client> {
     public Client add(Client value) {
         value.setClientCode(generateId());
         clientList.add(value);
+        writeJson();
         return value;
     }
 
