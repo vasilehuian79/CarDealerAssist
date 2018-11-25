@@ -1,5 +1,6 @@
 package sales;
 
+import client.ClientConsoleReader;
 import client.ClientService;
 
 import java.util.List;
@@ -7,7 +8,8 @@ import java.util.List;
 public class SalesService {
 
     SalesStorage salesStorage = new SalesStorage();
-    ClientService clientService = new ClientService();
+    ClientService clientService = ClientService.getInstance();
+    SalesConsoleReader saleReader = new SalesConsoleReader();
 
 
 

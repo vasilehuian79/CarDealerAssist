@@ -1,5 +1,7 @@
 package sales;
 
+import client.Client;
+import client.ClientConsoleReader;
 import menus.MainMenu;
 
 import java.io.IOException;
@@ -11,8 +13,6 @@ public class SalesConsoleMenu {
 
     SalesService salesService = new SalesService();
     SalesConsoleWriter salesWriter = new SalesConsoleWriter();
-//    OrderConsoleReader orderReader = new OrderConsoleReader();
-
 
     private void displaySalesMenuOption() throws IOException {
         System.out.println("\t1. Add sale");
@@ -60,9 +60,11 @@ public class SalesConsoleMenu {
 
     private void addSale() {
         SalesConsoleReader saleReader = new SalesConsoleReader();
-        Sales sales = new Sales();
+        Sales sales = saleReader.readSalesData();
         salesService.addSale(sales);
         System.out.println("Sale successfully added.");
     }
 
 }
+
+
