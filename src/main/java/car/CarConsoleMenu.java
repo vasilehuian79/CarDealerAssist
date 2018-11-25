@@ -12,7 +12,7 @@ public class CarConsoleMenu {
     static CarService carService = CarService.getInstance();
     static CarConsoleReader carConsoleReader = new CarConsoleReader();
     static CarConsoleWriter carConsoleWriter = new CarConsoleWriter();
-    static CarStorage carStorage = new CarStorage();
+    static CarStorage carStorage = CarStorage.getInstance();
     CarDealerType dealerType;
 
     public static void displayStockOption() throws IOException {

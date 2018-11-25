@@ -5,7 +5,7 @@ import java.util.List;
 public class CarService {
 
 //    CarConsoleReader carReader = new CarConsoleReader();
-    CarStorage carStorage = new CarStorage();
+    CarStorage carStorage = CarStorage.getInstance();
 
     private CarService() {
     }
