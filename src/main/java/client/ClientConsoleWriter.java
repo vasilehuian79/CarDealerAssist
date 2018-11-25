@@ -1,4 +1,4 @@
-package clientv2;
+package client;
 
 public class ClientConsoleWriter {
 

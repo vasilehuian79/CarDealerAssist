@@ -1,9 +1,11 @@
 package car;
 
+import client.GenericStore;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarStorage extends clientv2.GenericStore<Car> {
+public class CarStorage extends GenericStore<Car> {
 
     private List<Car> carList = new ArrayList();
 

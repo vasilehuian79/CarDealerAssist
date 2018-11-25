@@ -1,6 +1,6 @@
 package menus;
 
-import clientv2.ClientConsoleMenu;
+import client.ClientConsoleMenu;
 import sales.SalesConsoleMenu;
 
 import java.io.IOException;

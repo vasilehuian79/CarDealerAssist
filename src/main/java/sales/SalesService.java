@@ -1,6 +1,6 @@
 package sales;
 
-import clientv2.ClientService;
+import client.ClientService;
 
 import java.util.List;
 
