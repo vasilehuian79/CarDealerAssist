@@ -10,19 +10,19 @@ public class ClientConsoleReader {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Adding a new client");
 
-        System.out.println("Please enter your First Name");
+        System.out.print("Please enter first name: ");
         String firstName = scanner.next();
         client.setFirstName(firstName);
 
-        System.out.println("Please enter your Last Name");
+        System.out.print("Please enter last name: ");
         String lastName = scanner.next();
         client.setLastName(lastName);
 
-        System.out.println("Please enter your SSN");
+        System.out.print("Please enter SSN: ");
         Integer ssn = scanner.nextInt();
         client.setSsn(ssn);
 
-        System.out.println("Please enter your email address");
+        System.out.print("Please enter email address: ");
         String email = scanner.next();
         client.setEmail(email);
 
